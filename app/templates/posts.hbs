@@ -4,3 +4,13 @@ Posts go here!
 <div id="new-post-link">{{#link-to 'posts.new-post'}}New Post{{/link-to}}</div>
 
 {{outlet}}
+
+{{#each model as |post|}}
+  <div class="post">
+    <h3>{{post.title}}!</h3>
+    <h4>By: {{post.author}}</h4>
+    <p>
+      {{post.body}}
+    </p>
+  </div>
+{{/each}}
