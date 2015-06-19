@@ -10,19 +10,19 @@ export default Ember.ObjectController.extend({
   isResponding: false,
   actions: {
     edit: function() {
-      this.set('isEditing', true)
+      this.set('isEditing', true);
     },
     save: function() {
-      this.set('isEditing', false)
+      this.set('isEditing', false);
     },
     delete: function() {
       if (confirm('Really?')) {
         this.get('model').destroyRecord();
-        this.transitionToRoute('/', {async: true})
+        this.transitionToRoute('/', {async: true});
       }
     },
     respond: function() {
-      this.set('isResponding', true)
+      this.set('isResponding', true);
     }
   }
 });
