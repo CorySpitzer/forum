@@ -10,6 +10,7 @@ Router.map(function() {
   this.route("about");
   // Whereas .resource renders a group of related templates
   this.resource("posts");
+  this.route('posts');
 });
 
 export default Router;
