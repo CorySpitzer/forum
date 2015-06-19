@@ -1,12 +1,38 @@
+{{#if isEditing}}
+  <form>
+    <div class="form-group">
+      <label for="title">Title:</label>
+      {{input value=title id="title" class="form-control"}}
+    </div>
 
-<div class="post">
+    <div class="form-group">
+      <label for="author">Author:</label>
+      {{input value=author id="author" class="form-control"}}
+    </div>
 
-  <h2 class="title">
-    <h1>{{title}}</h1>
-  </h2>
+    <div class="form-group">
+      <label for="body">Body:</label>
+      {{input value=body id="body" class="form-control"}}
+    </div>
 
-  <h3 class="author">By: {{post.author}}</h3>
-  <p class="body">
-    {{post.body}}
-  </p>
-</div>
+    <button class="btn btn-xs btn-primary" {{action 'save'}}>Save</button>
+  </form>
+
+{{else}}
+  <div class="post">
+
+    <h2 class="title">
+      <h1>{{title}}</h1>
+    </h2>
+
+    <h3 class="author">By: {{author}}</h3>
+    <p class="body">
+      {{body}}
+    </p>
+  </div>
+  <div class="edit-and-delete">
+    <button class="btn btn-xs btn-primary" {{action 'edit'}}>Edit Post</button>
+    <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete Post</button>
+  </div>
+
+{{/if}}
