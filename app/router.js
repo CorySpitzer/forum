@@ -6,6 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  // .route renders a single template
+  this.route("about");
+  // Whereas .resource renders a group of related templates
+  this.resource("posts");
 });
 
 export default Router;
