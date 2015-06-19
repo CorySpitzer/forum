@@ -1,0 +1,8 @@
+11:13 -
+  Error while processing route: posts.index Could not find module
+  `firebase` imported from `forum/adapters/application` Error: Could
+  not find module `firebase` imported from `forum/adapters/application`
+
+  Looked https://github.com/firebase/emberfire/issues/244 but didn't help
+
+  Solution? Make a new branch without Emberfire :(
