@@ -9,7 +9,7 @@ Router.map(function() {
   // .route renders a single template
   this.route("about");
   // Whereas .resource renders a group of related templates
-  this.resource("posts", function() {
+  this.resource("posts", {path: '/'}, function() {
     this.route("new-post");
   });
 
