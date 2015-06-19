@@ -13,7 +13,7 @@ Router.map(function() {
     this.route("new-post");
   });
   this.resource("post", {path: ':post_id'}, function() {
-    this.route("response");
+    this.route("new-response");
   });
 });
 

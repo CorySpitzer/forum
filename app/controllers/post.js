@@ -6,6 +6,7 @@ import Ember from 'ember';
 // ObjectControllers give their hbs files access to properties
 // and Controllers don't:
 export default Ember.ObjectController.extend({
+  needs: ['response'],
   isEditing: false,
   isResponding: false,
   actions: {
@@ -23,6 +24,18 @@ export default Ember.ObjectController.extend({
     },
     respond: function() {
       this.set('isResponding', true);
+    },
+    submitResponse: function() {
+      var newResponse = this.store.createRecord('response', {
+        body: this.get('body'),
+        date: this.get('date')
+      });
+      // Reset the form:
+      newResponse.save();
+      this.setProperties({
+        body: '',
+        date: ''
+      });
     }
   }
 });
