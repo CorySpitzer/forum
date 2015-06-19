@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'forum',
     environment: environment,
+    firebase: 'https://forum-forum.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
