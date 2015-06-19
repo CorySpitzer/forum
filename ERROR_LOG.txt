@@ -5,4 +5,4 @@
 
   Looked https://github.com/firebase/emberfire/issues/244 but didn't help
 
-  Solution? Make a new branch without Emberfire :(
+  Solution? Restart server!
