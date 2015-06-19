@@ -20,19 +20,30 @@
 
 {{else}}
   <div class="post">
-
     <h2 class="title">
       <h1>{{title}}</h1>
     </h2>
-
     <h3 class="author">By: {{author}}</h3>
     <p class="body">
       {{body}}
     </p>
   </div>
-  <div class="edit-and-delete">
-    <button class="btn btn-xs btn-primary" {{action 'edit'}}>Edit Post</button>
-    <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete Post</button>
-  </div>
+
+  {{#if isResponding}}
+    <form>
+      <div class="form-group">
+        <label for="response">Response:</label>
+        {{input value=response id="response" class="form-control"}}
+      </div>
+      <button class="btn btn-xs btn-success" {{action 'submitResponse'}}>Submit Response</button>
+    </form>
+
+  {{else}}
+    <div class="edit-and-delete">
+      <button class="btn btn-xs btn-primary" {{action 'edit'}}>Edit Post</button>
+      <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete Post</button>
+      <button class="btn btn-xs btn-success" {{action 'respond'}}>Respond</button>
+    </div>
+  {{/if}}
 
 {{/if}}

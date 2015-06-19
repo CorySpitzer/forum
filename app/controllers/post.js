@@ -6,7 +6,8 @@ import Ember from 'ember';
 // ObjectControllers give their hbs files access to properties
 // and Controllers don't:
 export default Ember.ObjectController.extend({
-  isediting: false,
+  isEditing: false,
+  isResponding: false,
   actions: {
     edit: function() {
       this.set('isEditing', true)
@@ -19,6 +20,9 @@ export default Ember.ObjectController.extend({
         this.get('model').destroyRecord();
         this.transitionToRoute('/', {async: true})
       }
+    },
+    respond: function() {
+      this.set('isResponding', true)
     }
   }
 });
