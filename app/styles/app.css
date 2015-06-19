@@ -1,0 +1,17 @@
+.post {
+  padding: 5px;
+  border: 2px solid lightgrey;
+  margin: 3px;
+}
+
+.title {
+  background-color: lightblue;
+}
+
+.author {
+  background-color: lightyellow;
+}
+
+.body {
+  background-color: lightgreen;
+}
